@@ -9,7 +9,8 @@ x-px4-base: &px4-base
 x-px4-env: &px4-env
   PX4_SYS_AUTOSTART: 10043
   PX4_SIM_MODEL: sihsim_standard_vtol
-  PX4_HOME_ALT: ${PX4_HOME_ALT:-488.0}
+  # Defaults are the Mt. Baldy summit (alt 3068 m); set real values in the gitignored docker/.env
+  PX4_HOME_ALT: ${PX4_HOME_ALT:-3068}
 
 services:
   # Vanguard fleet
