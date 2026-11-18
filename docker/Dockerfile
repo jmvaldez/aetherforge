@@ -30,7 +30,8 @@ RUN pip3 install --no-cache-dir \
     future
 
 # Clone PX4 and build the SITL binary
-ARG PX4_VERSION=main
+# Pinned: `main` moves and broke the build. Bump deliberately.
+ARG PX4_VERSION=v1.17.0
 RUN git clone --depth 1 --branch ${PX4_VERSION} --recurse-submodules --shallow-submodules \
     https://github.com/PX4/PX4-Autopilot.git ${FIRMWARE_DIR}
 
